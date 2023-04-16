@@ -19,11 +19,21 @@ jobs:
           sudo apt-get install -y poppler-utils
           pdftoppm cv.pdf output -png -rx 150 -ry 150
           mv output-1.png README.png
-
+#      - uses: stefanzweifel/git-auto-commit-action@v4
+#        with:
+#          commit_message: Updating ReadMe
+      - name: GIT commit and push output
+        env:
+          CI_COMMIT_MESSAGE: Continuous Integration Build
+          CI_COMMIT_AUTHOR: Continuous Integration
+        run: |
+          git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
+          git config --global user.email "louisdewilde2001@gmail.com"
+          git add docs
+          git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
+          git push
 #      - name: Commit and push generated files
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: Updating ReadMe
+
 #        env:
 #          GH_TOKEN: ${{ secrets.GH_TOKEN }}
 #        run: |
