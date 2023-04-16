@@ -26,13 +26,15 @@ jobs:
         env:
           CI_COMMIT_MESSAGE: Continuous Integration Build
           CI_COMMIT_AUTHOR: Continuous Integration
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
           git config --global user.email "louisdewilde2001@gmail.com"
           git add README.png
           git add cv.pdf
           git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
-          git push
+          git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git
+          git push origin HEAD:${{ github.ref }}
 #      - name: Commit and push generated files
 
 #        env:
