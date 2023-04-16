@@ -21,9 +21,12 @@ jobs:
           mv output-1.png README.png
 
       - name: Commit and push generated files
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add README.png
           git commit -m "Update README.png" || exit 0
-          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:${{ github.ref }}
+          git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git
+          git push HEAD:${{ github.ref }}
