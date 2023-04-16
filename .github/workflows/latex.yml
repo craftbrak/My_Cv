@@ -20,7 +20,6 @@ jobs:
           pdftoppm cv.pdf output -png -rx 150 -ry 150
           mv output-1.png README.png
 
-      - name: Commit and push generated files
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Updating ReadMe
