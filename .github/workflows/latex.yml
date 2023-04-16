@@ -20,16 +20,16 @@ jobs:
           pdftoppm cv.pdf output -png -rx 150 -ry 150
           mv output-1.png README.png
 
-      - name: Commit and push generated files
-#      - uses: stefanzweifel/git-auto-commit-action@v4
-#        with:
-#          commit_message: Updating ReadMe
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: |
-          git config --local user.email "louisdewilde2001@gmail.com"
-          git config --local user.name "craftbrak"
-          git add README.png
-          git commit -m "Update README.png" || exit 0
-          git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git
-          git push origin HEAD:${{ github.ref }}
+#      - name: Commit and push generated files
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Updating ReadMe
+#        env:
+#          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+#        run: |
+#          git config --local user.email "louisdewilde2001@gmail.com"
+#          git config --local user.name "craftbrak"
+#          git add README.png
+#          git commit -m "Update README.png" || exit 0
+#          git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git
+#          git push origin HEAD:${{ github.ref }}
