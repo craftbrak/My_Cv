@@ -31,7 +31,8 @@ jobs:
         run: |
           git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
           git config --global user.email "louisdewilde2001@gmail.com"
-          git add .
+          git add README.png
+          git add out/cv.pdf
           git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
           git push
 #      - name: Commit and push generated files
