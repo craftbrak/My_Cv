@@ -27,7 +27,6 @@ jobs:
           CI_COMMIT_MESSAGE: Continuous Integration Build
           CI_COMMIT_AUTHOR: Continuous Integration
         run: |
-          ls ./
           git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
           git config --global user.email "louisdewilde2001@gmail.com"
           git add README.png
