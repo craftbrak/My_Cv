@@ -29,4 +29,4 @@ jobs:
           git add README.png
           git commit -m "Update README.png" || exit 0
           git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git
-          git push HEAD:${{ github.ref }}
+          git push origin HEAD:${{ github.ref }}
