@@ -1,1 +1,1 @@
-![CV](README.png)
+![CV](RESUME_EN.png)

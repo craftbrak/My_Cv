@@ -1,9 +1,9 @@
 \documentclass[%singlesided,
     doublesided,
     paper=a4,
-    fontsize=10pt
+    fontsize=10pt,
+hidelinks
 ]{my-resume}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % set geometry
@@ -30,10 +30,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \colorlet{highlightbarcolor}{lightgray}
-\colorlet{headerbarcolor}{darkgray}
+\colorlet{headerbarcolor}{mediumgray}
 
 \colorlet{headerfontcolor}{white}
-\colorlet{accent}{awesome-red}
+\colorlet{accent}{awesome-orange}
+\colorlet{accent-dots}{awesome-deepskyblue}
+\colorlet{accent-icons}{awesome-deepdeepskyblue}
+\colorlet{accent-text}{awesome-deepdeepskyblue}
 \colorlet{heading}{black}
 \colorlet{emphasis}{black}
 \colorlet{body}{black}
@@ -47,8 +50,10 @@
 \begin{document}
 
     \name{Louis De Wilde}
-    %\tagline{Amazing tag line that makes HR managers want to hire you immediately.\\The tag line is aligned with the bottom of the picture to the right, so if you have\\multiple lines it fills the space to your name from the bottom. You might want to\\introduce manual line breaks to make this look nicer then simply filling up the lines.}
-    %\photo[round]{picture.jpg}{\dimexpr \headerheight-\marginbottom}   % make photo exactly match the header with margintop/marginright/marginbottom as margin
+    \tagline{Blending Development, Networking, Systems Management, and Teaching Expertise:
+
+    A Multifaceted Professional Committed to Driving Innovation, Supporting Business Goals, and Nurturing Future Talent.}
+    \photo[round]{}{\dimexpr \headerheight-\marginbottom}   % make photo exactly match the header with margintop/marginright/marginbottom as margin
 
     \makeheader
 
@@ -87,8 +92,6 @@
 
         \vspace{0.5em}
         \skillsection{Software \& Tools}
-        \skill{Visualisation}{5}
-        \skill{Data handling/analysis}{5}
         \skill{Docker}{3}
         \skill{Bash}{2}
         \skill{Kubernetes}{3}
@@ -115,6 +118,7 @@
 
         \section{Certificates}
         \simpleskill{Cisco CCNA1}
+        \simpleskill{CESS (2019)}
 
     }
     \mainbar{
@@ -122,65 +126,74 @@
         \job{2023}
         {Aquaplouf, Torembais}
         {Swim Teacher}
-        {Teaching kids for 4 to 10 how to swim}
+        {Teaching kids aged 4 to 10 how to swim}
         \job{7/2022 - 12/2022}
         {PSI Metals, Brussels}
         {Junior Developer}
-        {Developping new features in typescipt and C++
-        Integration a Buisnes Intelligence system (Qlik) into the companies products}
-        \job{2/2022 - 6/2022 }
+        {Developing new features in TypeScript and C++
+        Integrating a Business Intelligence system (Qlik) into the company's products}
+        \job{2/2022 - 6/2022}
         {Ghoz-Software, Jodoigne}
-        {Intern as a Junior Developper / Sys admin}
-        {Developping a micro service based project in Java with Spring, Keycloak and Angular.
-        Deploying A hight availability server for mail and web hosting
-        }
+        {Internship: Developer/Sys admin}
+        {Developing a microservice-based project in Java, Spring, Keycloak, and Angular.
+        Deploying a high availability server for mail and web hosting}
         \job{7/2021 - 9/2021}
         {Ghoz-Software, Jodoigne}
-        {Junior Developper / Sys Admin}
-        {Developping a micro service based project around CalDAV in Java with Spring Keycloak and Angular.
-        Deploying a hight availability network with 2 inbound connections and multiple firewall
-        }
+        {Junior Developer / Sys Admin}
+        {Developing a microservice-based project around CalDAV in Java, Spring, Keycloak, and Angular.
+        Deploying a high availability network with 2 inbound connections and multiple firewalls}
         \job{8/2019}
-        {Chêne & Bambbou, Ramillie}
-        {Handiman/ Beginer WoodWorker}
-        {Fixing doors, Sanding wood, cutting wood, ...}
+        {Chêne \& Bambou, Ramillies}
+        {Handyman/ Beginner Woodworker}
+        {Fixing doors, sanding wood, cutting wood, ...}
         \job{2/2019}
         {Novatek, Jodoigne}
-        {Intern / Seller}
-        {Selling IT hardware, fixing computer, building computer}
+        {Internship: Seller}
+        {Selling IT hardware, fixing computers, building computers}
         \job{2016-2018}
         {Cercle de Natation Jodoigne, Jodoigne}
-        {Swim Teacher}
-        {Teaching kids form 4 to 6 how to swim}
+        {Swimming Teacher}
+        {Teaching kids aged 4 to 6 how to swim}
         \job{2018}
         {Ghoz-Software}
-        {Intern}
-        {Deploying linux server and developing a PHP website}
+        {Internship}
+        {Deploying Linux server and developing a PHP website}
 
         \section[\faMortarBoard]{Education}
-        \job{01/2019 - 12/2019}
-        {University, City}
-        {Bachelor of Something}
-        {}
+        \job{9/2019 - now}
+        {EPHEC, Louvain-la-Neuve}
+        {Bachelor in IT}
+        {Technologie de l'informatique (164 ECTS validated)}
 
-        \section{Achievements, honours and awards}
-        \achievement{My first achievement}
-        \achievement{My second achievement}
+        \job{9/2007 - 6/2019}
+        {IPES, Wavre}
+        {Secondary School}
+        {Technical professional training in IT}
+
+        \job{9/2013 - 6/2017}
+        {ARJ, Jodoigne}
+        {Secondary School}
+        {General education, Dutch immersion, Latin and Science options}
 
         \section{General Skills}
         \smallskip % additional skip because tag outlines use up space
-        \tag{Tag 1}
-        \tag{Tag 2}
-        \tag{and}
-        \tag{another tag}
-        \tag{some more tags}
-        \tag{yet another one}
-        \tag{tags flow over}
-        \tag{to the next line}
-        \tag{if necessary}
+        \tag{Wood-working}
+        \tag{App Developpelment}
+        \tag{IT Networking}
+        \tag{Drums}
+        \tag{IT}
+        \tag{Electronic}
+        \tag{3D Printing}
+        \tag{3D modleing}
+        \tag{Swimming}
+        \tag{teaching}
+        \tag{linux}
+
+        \section{Achievements, honours and awards}
+        \achievement{25 podium in National Swiming League}
+        \achievement{3 podiums in TangSoDo National League}
 
         \medskip
-        Tags must be ordered by hand with newlines to get a nice layout, especially for long tags.
     }
     \makebody
 
