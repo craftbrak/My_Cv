@@ -1,0 +1,196 @@
+\documentclass[%singlesided,
+    doublesided,
+    paper=a4,
+    fontsize=10pt,
+    hidelinks
+]{my-resume}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% set geometry
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength\highlightwidth{8cm}
+\setlength\headerheight{3cm}            % note that margintop gets added to this value, i.e. the header bar is 5cm
+\setlength\marginleft{1cm}
+\setlength\marginright{\marginleft}      % needs to be 1.5 times to be actually equal. why?
+\setlength\margintop{0.5cm}
+\setlength\marginbottom{0.5cm}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FONTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\RequirePackage{fontspec}
+\setmainfont{Carlito}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% COLORS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\colorlet{highlightbarcolor}{lightgray}
+\colorlet{headerbarcolor}{mediumgray}
+
+\colorlet{headerfontcolor}{white}
+\colorlet{accent}{awesome-orange}
+\colorlet{accent-dots}{awesome-deepskyblue}
+\colorlet{accent-icons}{awesome-deepdeepskyblue}
+\colorlet{accent-text}{awesome-deepdeepskyblue}
+\colorlet{heading}{black}
+\colorlet{emphasis}{black}
+\colorlet{body}{black}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% set document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+    \name{Louis De Wilde}
+    \tagline{Mêlant expertise en développement, réseaux, gestion de systèmes et enseignement :
+
+    Un professionnel polyvalent déterminé à stimuler l'innovation, soutenir les objectifs commerciaux et encourager les talents de demain.}
+    \photo[round]{}{\dimexpr \headerheight-\marginbottom}   % make photo exactly match the header with margintop/marginright/marginbottom as margin
+
+    \makeheader
+
+    \highlightbar{
+
+    \section{Contact}
+
+    \email{louisdewilde2001@gmail.com}
+    \phone{+32 470 07 97 39}
+    \location{Rue Joseph Boulanger 20, 1350 Noduwez}
+    \vspace{0.5em}
+    %\homepage{nicokrieger.com}{https://www.nicokrieger.de}
+    \github{@craftbrak}{https://github.com/craftbrak}
+    \linkedin{Louis De Wilde}{https://www.linkedin.com/in/louis-de-b405981a4/}
+    %\orcid{0000-0003-1104-2014}{https://www.orcid.org/0000-0003-1104-2014}
+    %\ads{NASA/ADS publication list}{https://ui.adsabs.harvard.edu/search/fq=\%7B!type\%3Daqp\%20v\%3D\%24fq\_database\%7D&fq\_database=database\%3A\%20astronomy&p\_=0&q=pubdate\%3A\%5B2016-01\%20TO\%209999-12\%5D\%20author\%3A(\%22Krieger\%2C\%20Nico\%22)&sort=date\%20desc\%2C\%20bibcode\%20desc}
+
+    \section{Compétences}
+
+    \skillsection{Programmation}
+    \skill{Python}{5}
+    \skill{Java}{3}
+    \skill{Javascript/TypeScript}{5}
+    \skill{Kotlin}{4}
+    \skill{C}{3}
+    \skill{C++}{2}
+    \skill{Go}{1}
+    \skill{HTML/CSS}{3}
+    \skill{LaTeX}{3}
+    \skill{Sh}{2}
+    \vspace{0.5em}
+    \skillsection{Systèmes d'exploitation}
+    \skill{Linux}{4}
+    \skill{Windows}{3}
+
+    \vspace{0.5em}
+    \skillsection{Logiciels et outils}
+    \skill{Docker}{3}
+    \skill{Bash}{2}
+    \skill{Kubernetes}{3}
+    \skill{Ansible}{2}
+    \skill{Office}{4}
+    \skill{Git}{3}
+    \skill{CI/CD}{3}
+
+    \vspace{0.5em}
+    \skillsection{Frameworks et bibliothèques de programmation}
+    \skill{Angular}{4}
+    \skill{Spring}{5}
+    \skill{NestJs}{5}
+    \skill{GraphQl}{4}
+    \skill{Android}{2}
+
+    \vspace{0.5em}
+    \skillsection{Langues}
+    \skill{Français}{5}
+    \skill{Anglais}{4}
+    \skill{Néerlandais}{2}
+    \bigskip
+
+    \section{Certificats}
+    \simpleskill{Cisco CCNA1}
+    \simpleskill{CESS (2019)}
+
+    }
+\mainbar{
+    \section[\faGears]{Expérience professionnelle}
+    \job{2023}
+    {Aquaplouf, Torembais}
+    {Professeur de natation}
+    {Enseigner la natation aux enfants de 4 à 10 ans}
+    \job{7/2022 - 12/2022}
+    {PSI Metals, Bruxelles}
+    {Développeur junior}
+    {Développer de nouvelles fonctionnalités en TypeScript et C++
+    Intégration d'un système de Business Intelligence (Qlik) dans les produits de l'entreprise}
+    \job{2/2022 - 6/2022}
+    {Ghoz-Software, Jodoigne}
+    {Stage : Développeur/Sys admin}
+    {Développement d'un projet basé sur des microservices en Java, Spring, Keycloak et Angular.
+    Déploiement d'un serveur haute disponibilité pour le courrier électronique et l'hébergement web}
+    \job{7/2021 - 9/2021}
+    {Ghoz-Software, Jodoigne}
+    {Développeur junior / Administrateur système}
+    {Développement d'un projet basé sur des microservices autour de CalDAV en Java, Spring, Keycloak et Angular.
+    Déploiement d'un réseau haute disponibilité avec 2 connexions entrantes et plusieurs pare-feu}
+    \job{8/2019}
+    {Chêne \& Bambou, Ramillies}
+    {Homme à tout faire / Débutant en menuiserie}
+    {Réparation de portes, ponçage du bois, découpe du bois, ...}
+    \job{2/2019}
+    {Novatek, Jodoigne}
+    {Stage : Vendeur}
+    {Vente de matériel informatique, réparation d'ordinateurs, assemblage d'ordinateurs}
+    \job{2016-2018}
+    {Cercle de Natation Jodoigne, Jodoigne}
+    {Professeur de natation}
+    {Enseigner la natation aux enfants de 4 à 6 ans}
+    \job{2018}
+    {Ghoz-Software}
+    {Stage}
+    {Déploiement de serveurs Linux et développement d'un site web en PHP}
+    \section[\faMortarBoard]{Formation}
+    \job{9/2019 - maintenant}
+    {EPHEC, Louvain-la-Neuve}
+    {Bachelier en informatique}
+    {Technologie de l'informatique (164 ECTS validés)}
+
+    \job{9/2007 - 6/2019}
+    {IPES, Wavre}
+    {École secondaire}
+    {Formation professionnelle technique en informatique}
+
+    \job{9/2013 - 6/2017}
+    {ARJ, Jodoigne}
+    {École secondaire}
+    {Éducation générale, immersion néerlandaise, options latin et sciences}
+
+    \section{Compétences générales}
+    \smallskip % espace supplémentaire car les contours des balises utilisent de l'espace
+    \tag{Travail du bois}
+    \tag{Développement d'applications}
+    \tag{Réseautage informatique}
+    \tag{Batterie}
+    \tag{Informatique}
+    \tag{Électronique}
+    \tag{Impression 3D}
+    \tag{Modélisation 3D}
+    \tag{Natation}
+    \tag{Enseignement}
+    \tag{Linux}
+    \tag{Réseautage}
+    \tag{Hébergement}
+
+    \section{Réalisations, honneurs et récompenses}
+    \achievement{25 podiums en Ligue nationale de natation}
+    \medskip
+}
+    \makebody
+\end{document}
