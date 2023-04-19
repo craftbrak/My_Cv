@@ -11,7 +11,12 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: resume.tex
-          latexmk_use_xelatex: true
+          latexmk_use_lualatex: true
+      - name: Convert PDF to PNG
+        run: |
+          sudo apt-get install -y poppler-utils
+          pdftoppm resume.pdf output -png -rx 150 -ry 150
+          mv output-1.png README.png
       - uses: actions/upload-artifact@v2
         with:
           name: resume.pdf
