@@ -103,6 +103,7 @@
 \definecolor{black}{HTML}{000000}
 \definecolor{darkgray}{HTML}{333333}
 \definecolor{mediumgray}{HTML}{444444}
+\definecolor{litgray}{HTML}{F0F0F0}
 \definecolor{gray}{HTML}{5D5D5D}
 % Basic colors
 \definecolor{green}{HTML}{C2E15F}
@@ -116,7 +117,7 @@
 \colorlet{graytext}{gray}
 % Awesome colors
 \definecolor{awesome-emerald}{HTML}{00A388}
-\definecolor{awesome-skyblue}{HTML}{0395DE}
+\definecolor{awesome-skyblue}{HTML}{0599FF}
 \definecolor{awesome-deepskyblue}{HTML}{0b1563}
 \definecolor{awesome-deepdeepskyblue}{HTML}{0e1230}
 \definecolor{awesome-red}{HTML}{DC3522}
@@ -413,7 +414,7 @@
 \newcommand{\skill}[2]{%
 \textcolor{emphasis}{\textbf{#1}}\hfill
 \foreach \x in {1,...,5}{%
-\space{\ifnumgreater{\x}{#2}{\color{gray}}{\color{accent-dots}}\faCircle}}\par%
+\space{\ifnumgreater{\x}{#2}{\color{lightgray}}{\color{accent-dots}}\faCircle}}\par%
 }
 
 % skill without any charts
