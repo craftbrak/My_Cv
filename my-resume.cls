@@ -111,6 +111,12 @@
 \definecolor{purple}{HTML}{D3A4F9}
 \definecolor{red}{HTML}{FB4485}
 \definecolor{blue}{HTML}{6CE0F1}
+
+\definecolor{cool-red}{HTML}{9d2f2f}
+\definecolor{dark-cool-red}{HTML}{9d2f2f}
+\definecolor{light-pink}{HTML}{F1E4E4}
+\definecolor{cool-pink}{HTML}{D5AFAF}
+\definecolor{dark-pink}{HTML}{623C3C}
 % Text colors
 \definecolor{darktext}{HTML}{414141}
 \colorlet{text}{darkgray}
@@ -414,7 +420,7 @@
 \newcommand{\skill}[2]{%
 \textcolor{emphasis}{\textbf{#1}}\hfill
 \foreach \x in {1,...,5}{%
-\space{\ifnumgreater{\x}{#2}{\color{lightgray}}{\color{accent-dots}}\faCircle}}\par%
+\space{\ifnumgreater{\x}{#2}{\color{empty-dots}}{\color{accent-dots}}\faCircle}}\par%
 }
 
 % skill without any charts
